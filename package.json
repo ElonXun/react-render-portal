@@ -1,0 +1,24 @@
+{
+  "name": "react-render-portal",
+  "version": "1.0.0",
+  "description": "a react component to render into body Edit",
+  "main": "renderPortal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElonXun/react-render-portal.git"
+  },
+  "keywords": [
+    "react",
+    "portal",
+    "render"
+  ],
+  "author": "elonxu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElonXun/react-render-portal/issues"
+  },
+  "homepage": "https://github.com/ElonXun/react-render-portal#readme"
+}
