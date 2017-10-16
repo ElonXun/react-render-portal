@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import ReactDom from 'react-dom';
 
+
 //老版本
 export class RenderPortalV1 extends Component{
   constructor(props){
