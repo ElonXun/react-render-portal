@@ -24,6 +24,11 @@ import {RenderPortalV2} from 'react-render-portal';
  ```
  RenderPortalV2组件会将 其内部子组件 `<p>I will render in body</p>`传送至 `body` 节点下 和 `root`并列
  并且 RenderPortalV2 内部子组件 会触发的事件会一直冒泡至 RenderPortalV2 (沿React树传递)
+
+
+[jsfiddle](http://jsfiddle.net/panxiaoxian/n3p94of4/)
+ 
+
  
  **react 旧版本**
 
