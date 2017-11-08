@@ -63,27 +63,23 @@ export class RenderPortalV3 extends React.Component {
     container: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired,
   }
-
   componentDidMount() {
     this.createContainer();
   }
-
   componentWillUnmount() {
     this.removeContainer();
   }
-
   createContainer() {
     this._container = this.props.container();
-    this.forceUpdate();
+    this.forceUpdate();//再一次render
   }
-
   removeContainer() {
     if (this._container) {
       this._container.parentNode.removeChild(this._container);
     }
   }
-
   render() {
+    // this.forceUpdate()配合手动调用render
     if (this._container) {
       return ReactDom.createPortal(this.props.children, this._container);
     }
