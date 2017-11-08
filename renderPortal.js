@@ -4,6 +4,9 @@ import ReactDom from 'react-dom';
 
 //老版本
 export class RenderPortalV1 extends Component{
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+  }
   constructor(props){
     super(props);
   }
@@ -30,6 +33,9 @@ export class RenderPortalV1 extends Component{
 
 //16.0 新版本版本
 export class RenderPortalV2 extends Component{
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+  }
   constructor(props){
     super(props);
     this.popup = document.createElement('div');
@@ -48,6 +54,40 @@ export class RenderPortalV2 extends Component{
         this.props.children,
         this.popup
     );
+  }
+}
+
+//RenderPortalV3 参考 antd 版本
+export class RenderPortalV3 extends React.Component {
+  static propTypes = {
+    container: PropTypes.func.isRequired,
+    children: PropTypes.node.isRequired,
+  }
+
+  componentDidMount() {
+    this.createContainer();
+  }
+
+  componentWillUnmount() {
+    this.removeContainer();
+  }
+
+  createContainer() {
+    this._container = this.props.container();
+    this.forceUpdate();
+  }
+
+  removeContainer() {
+    if (this._container) {
+      this._container.parentNode.removeChild(this._container);
+    }
+  }
+
+  render() {
+    if (this._container) {
+      return ReactDom.createPortal(this.props.children, this._container);
+    }
+    return null;
   }
 }
 
