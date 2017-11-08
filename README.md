@@ -31,7 +31,26 @@ import {RenderPortalV2} from 'react-render-portal';
 
 ![RenderPortalV2](https://github.com/ElonXun/react-render-portal/blob/master/lib/image/1E60C333-1834-4E9C-8F0C-8C9F5A34459D.png)
  
+update:
+在RenderPortalV2基础上更新至RenderPortalV3,使RenderPortal支持创建自定义的container包裹目标组件
 
+```
+import React from 'react';
+import {RenderPortalV3} from 'react-render-portal';
+
+ getContainer() {
+    const popup= document.createElement('div');
+    document.body.appendChild(popup);
+    return popup;
+ }
+ 
+ const example = () => (
+    <RenderPortalV3 container={this.getContainer} >
+       <p>I will render in body</p>
+    </RenderPortalV2>
+  )
+```
+---
  
  **react 旧版本**
 
