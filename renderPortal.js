@@ -41,7 +41,6 @@ export class RenderPortalV2 extends Component{
   componentDidUpdate(){
   }
   componentWillUnmount(){//在组件卸载的时候，保证弹层也被卸载掉
-    ReactDom.unmountComponentAtNode(this.popup);
     document.body.removeChild(this.popup);
   }
   render(){
