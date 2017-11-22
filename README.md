@@ -66,7 +66,7 @@ import {RenderPortalV1} from 'react-render-portal';
 
  ```
  RenderPortalV2组件会将 其内部子组件 `<p>I will render in body</p>`传送至 `body` 节点下 和 `root`并列
- 无事件传递
+ 但无事件传递
  
  **代码示例**
 
